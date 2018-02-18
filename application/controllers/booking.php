@@ -15,4 +15,18 @@ class Booking extends CI_Controller {
 		$data['rute'] = $get_rute;
 		$this->load->view('v_booking_prebooking',$data);
 	}
+
+	public function booking(){
+		$this->load->view('v_booking_booking');
+	}
+
+	public function seat(){
+		echo "pilih kursi";
+		$name = $this->input->post('name');
+		$address = $this->input->post('address');
+		$email = $this->input->post('email');
+		$gender = $this->input->post('gender');
+		var_dump([$name,$address,$email,$gender]);
+		die;
+	}
 }

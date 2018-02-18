@@ -16,5 +16,10 @@
 	<p>Harga tiket : <?php echo $rute[0]['price'] ?></p>
 	<p>Jumlah Penumpang : <?php echo $_GET['passengers'] ?></p>
 	<p>Jumlah bayar : <?php echo $_GET['passengers']*$rute[0]['price']  ?></p>
+
+	<form method="GET" action="<?php echo base_url() ?>booking/booking">
+		<input type="hidden" value="<?php echo $_GET['passengers'] ?>" name="passengers">
+		<button>Lanjut Booking</button>
+	</form>
 </body>
 </html>
