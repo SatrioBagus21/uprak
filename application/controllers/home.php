@@ -13,27 +13,36 @@ class Home extends CI_Controller {
 	}
 
 	function carirute(){
-		$from = $this->input->post('from');
-		$to = $this->input->post('to');
-		$departure = $this->input->post('departure');
-		$passengers = $this->input->post('passengers');
+		// var_dump(isset($this->input->get('from'));
+		// 	die
+		// if ($this->input->get('from') !== null) {
 
-		$departure = explode('/', $departure);
-		$departure = $departure[2].'-'.$departure[1].'-'.$departure[0];
+			$from = $this->input->get('from');
+			$to = $this->input->get('to');
+			$departure = $this->input->get('departure');
+			$passengers = $this->input->get('passengers');
+
+			$departure = explode('/', $departure);
+			$departure = $departure[2].'-'.$departure[1].'-'.$departure[0];
 		// var_dump($departure);
 		// die;
 
-		$class = $this->input->post('class');
-		$where = array(
-			'date(depart_at)' => $departure,
-			'rute_from' => $from,
-			'rute_to' => $to,
+			$class = $this->input->get('class');
+			$where = array(
+				'date(depart_at)' => $departure,
+				'rute_from' => $from,
+				'rute_to' => $to,
 
-			'class' => $class
-			);
+				'class' => $class
+				);
 
-		$data['rute'] = $this->m_data->tampilrute($where,'tb_rute')->result();
-		$data['passengers'] = $passengers;
-		$this->load->view('v_tampil_rute',$data);
+			$data['rute'] = $this->m_data->tampilrute($where,'tb_rute')->result();
+			$data['passengers'] = $passengers;
+			$this->load->view('v_tampil_rute',$data);
+
+		// }
+		// else{
+		// 	redirect(base_url());
+		// }
 	}
 }

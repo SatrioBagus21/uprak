@@ -65,7 +65,7 @@
                     </ul>
                     <div class="resp-tabs-container nav-custom-tab nav-custom-wide">
                       <div>
-                        <form method="post" action="<?php echo base_url('home/carirute')?>" class="small">
+                        <form method="get" action="<?php echo base_url('home/carirute')?>" class="small">
                          <div class="range">
                           <div class="cell-md-8">
                            <div class="form-group radio-inline-wrapper">
