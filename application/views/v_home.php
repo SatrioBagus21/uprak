@@ -133,16 +133,16 @@
                               <div class="range">
                                 <div class="cell-xs-6">
                                   <div class="form-group">
-                                    <label class="form-group-label">Adults (16+)</label>
-                                    <input type="number" min="0" value="2" class="form-control">
+                                    <label class="form-group-label">Passengers</label>
+                                    <input type="number" name="passengers" min="0" value="2" class="form-control">
                                   </div>
                                 </div>
-                                <div class="cell-xs-6 offset-top-15 offset-xs-top-0">
+                                <!-- <div class="cell-xs-6 offset-top-15 offset-xs-top-0">
                                   <div class="form-group">
                                     <label class="form-group-label">Children</label>
                                     <input type="number" min="0" value="0" class="form-control">
                                   </div>
-                                </div>
+                                </div> -->
                               </div>
                             </div>
                             <div class="cell-lg-clear-flex cell-sm-bottom cell-lg text-center text-lg-right offset-top-15 offset-lg-top-0">

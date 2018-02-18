@@ -16,6 +16,7 @@ class Home extends CI_Controller {
 		$from = $this->input->post('from');
 		$to = $this->input->post('to');
 		$departure = $this->input->post('departure');
+		$passengers = $this->input->post('passengers');
 
 		$departure = explode('/', $departure);
 		$departure = $departure[2].'-'.$departure[1].'-'.$departure[0];
@@ -32,6 +33,7 @@ class Home extends CI_Controller {
 			);
 
 		$data['rute'] = $this->m_data->tampilrute($where,'tb_rute')->result();
+		$data['passengers'] = $passengers;
 		$this->load->view('v_tampil_rute',$data);
 	}
 }

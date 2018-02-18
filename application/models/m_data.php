@@ -47,4 +47,11 @@ class M_data extends CI_Model{
 	function tampil_data_reservation(){
 		return $this->db->get('tb_reservation');
 	}
+
+	//prebooking
+
+	function get_rute($id){
+		$this->db->where(['id'=>$id]);
+		return $this->db->get('tb_rute')->result_array();
+	}
 }
