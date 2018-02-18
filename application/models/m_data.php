@@ -24,7 +24,9 @@ class M_data extends CI_Model{
 		$this->db->update($table,$data);
 	}
 
-
+	function tampilrute($where,$table){
+		return $this->db->get_where($table,$where);
+	}
 		
 	function tampil_data_customer(){
 		return $this->db->get('tb_customer');
